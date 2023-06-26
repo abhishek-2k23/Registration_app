@@ -23,7 +23,7 @@ dbconnect();
 app.use(cors());
 app.use(express.json());
 
-app.get('/abc', (req, res) => {
+app.get('/', (req, res) => {
   res.send("app is running smoothly");
 });
 
