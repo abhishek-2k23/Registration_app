@@ -1,0 +1,6 @@
+{
+    "verson" : 2,
+    "name" : "Marriage_registration_project",
+    "builds" : [{"src" : "index.js", "use" : "@vercel/node"}],
+    "routes" : [{"src" : "/(.*)", "dest" : "/index.js"}]
+}
