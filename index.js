@@ -29,8 +29,10 @@ app.get('/', (req, res) => {
 
 const {registerUser} = require("./registerUser");
 const {getUser} = require("./getUser");
+const {login} = require("./login");
 router.post('/register', registerUser);
 router.get('/getusers',getUser);
+router.post('/login',login);
 app.use(router);
 
 app.listen(4000, () => {

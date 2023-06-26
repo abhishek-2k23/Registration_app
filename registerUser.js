@@ -2,7 +2,7 @@ const express = require("express");
 const Schema = require("./schema");
 exports.registerUser = async (req, res) => {
   try {
-    const { firstName, lastName, Age, Email, phoneNumber, gender } = req.body;
+    const { firstName, lastName, Age, Email, phoneNumber, gender,Password } = req.body;
 
     const existingUser = await Schema.findOne({Email})
     if (existingUser) {
@@ -20,6 +20,7 @@ exports.registerUser = async (req, res) => {
         Email,
         phoneNumber,
         gender,
+        Password
       });
 
       res.status(200).json({
