@@ -1,7 +1,6 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const app = express();
-const router = express.Router();
 const cors = require("cors");
 
 function dbconnect() {
@@ -27,12 +26,8 @@ app.get('/', (req, res) => {
   res.send("app is running smoothly");
 });
 
-const {registerUser} = require("./registerUser");
-const {getUser} = require("./getUser");
-const {login} = require("./login");
-router.post('/register', registerUser);
-router.get('/getusers',getUser);
-router.post('/login',login);
+
+const router = require("./router");
 app.use(router);
 
 app.listen(4000, () => {

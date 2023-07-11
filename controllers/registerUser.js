@@ -1,5 +1,5 @@
 const express = require("express");
-const Schema = require("./schema");
+const Schema = require("../models/schema");
 exports.registerUser = async (req, res) => {
   try {
     const { firstName, lastName, Age, Email, phoneNumber, gender,Password } = req.body;

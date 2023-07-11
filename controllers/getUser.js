@@ -1,5 +1,5 @@
 const express = require("express");
-const Schema = require("./schema");
+const Schema = require("../models/schema");
 
 exports.getUser = async(req,res) =>{
     try{

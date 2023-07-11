@@ -1,4 +1,4 @@
-const Schema = require("./schema");
+const Schema = require("../models/schema");
 const express = require("express");
 exports.login = async(req,res)=>{
     try{
@@ -22,7 +22,7 @@ exports.login = async(req,res)=>{
             })
         }else{
             console.log("Password unmatched.")
-            res.status(404).json({
+            res.status(402).json({
                 success : false,
                 message : "Password does not match."
             })
